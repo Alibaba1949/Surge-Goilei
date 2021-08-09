@@ -1,5 +1,5 @@
 #!name=YouTube
-#!desc=YouTube
+#!desc=YouTubeAds
 
 [Rule]
 URL-REGEX,https?:\/\/.+.googlevideo.com\/ptracking\?pltype=adhost,REJECT
