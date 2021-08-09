@@ -1,0 +1,8 @@
+#!name=dsj
+#!desc=d-header
+
+[Script]
+电视家 = type=http-request,pattern=http://.+/api/v2/device/info,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ziye888/JavaScript/main/Task/dsj.js
+
+[Mitm] 
+hostname= 
