@@ -1,0 +1,9 @@
+#!name=Youth
+#!desc=Youth-gain
+
+[Script]
+中青看点浏览赚 = type=http-request,pattern=https:\/\/ios\.baertt\.com\/v5\/task\/browse_start\.json,requires-body=1,script-path=https://raw.githubusercontent.com/Sunert/Script/master/Task/youth_gain.js
+中青看点看看赚 = type=http-request,pattern=https:\/\/ios\.baertt\.com\/v5\/Nameless\/adlickstart\.json,requires-body=1,script-path=https://raw.githubusercontent.com/Sunert/Script/master/Task/youth_gain.js
+
+[MITM]
+hostname = ios.baertt.com, kd.youth.cn
