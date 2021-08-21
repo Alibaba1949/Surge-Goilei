@@ -1,0 +1,11 @@
+#!name=Youth
+#!desc=Youth-gain1
+
+[Script]
+中青看点浏览赚 = type=http-request,pattern=^https?://(ios\.baertt|kandian\.wkandian)\.com\/v5\/task/browse_start\.json,requires-body=1,script-path=https://raw.githubusercontent.com/ztxtop/x/main/youth_banner.js
+中青看点看看赚 = type=http-request,pattern=^https?://(ios\.baertt|kandian\.wkandian)\.com/v5/Nameless/adlickstart\.json,requires-body=1,script-path=https://raw.githubusercontent.com/ztxtop/x/main/youth_banner.js
+中青看点浏览口 = type=http-request,pattern=^https://kd\.youth\.cn/WebApi/NewTaskIos/getTaskList,requires-body=1,script-path=https://raw.githubusercontent.com/ztxtop/x/main/youth_banner.js
+中青看点时间长 = type=http-request,pattern=^https?://(ios\.baertt|kandian\.wkandian)\.com/v5/user/app_stay\.json,requires-body=1,script-path=https://raw.githubusercontent.com/ztxtop/x/main/youth_banner.js
+
+[MITM]
+hostname = kandian.wkandian.com, kd.youth.cn, ios.baertt.com
