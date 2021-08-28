@@ -1,5 +1,5 @@
 #!name=YouTube
-#!desc=YouTubeAds
+#!desc=YouTube videos removes ads.
 
 [Rule]
 URL-REGEX,https?:\/\/.+.googlevideo.com\/ptracking\?pltype=adhost,REJECT
@@ -14,13 +14,13 @@ URL-REGEX,https?:\/\/stats.tubemogul.com\/stats\/,REJECT
 URL-REGEX,https?:\/\/youtubei.googleapis.com\/.+ad_break,REJECT
 URL-REGEX,https?:\/\/youtubei.googleapis.com\/youtubei\/.+(ad|log),REJECT
 URL-REGEX,https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adformat,REJECT
-URL-REGEX,https?:\/\/[\w-]+\.googlevideo\.com\/.+&(oad|ctier),REJECT
+URL-REGEX,https?:\/\/[\w-]+\.googlevideo\.com\/.+&oad,REJECT-TINYGIF
 
 [URL Rewrite]
-^https?+:\/\/.+?\.googlevideo\.com\/.+?(?>&oad|ctier) - reject-200
-^https?+:\/\/\w+?\.youtube\.com\/api\/.+?ad - reject-200
-^https?+:\/\/\w+?\.youtube\.com\/p(?>agead|tracking) - reject-200
-^https?+:\/\/youtubei\.googleapis\.com\/youtubei\/.+?(?>ad|log)_ - reject-200
+ctier=[A-Z] citer=A 302
+
+[Script]
+http-request https?:\/\/.+?\.googlevideo\.com\/.+&(oad|ctier)=(?!A),script-path=https://choler.github.io/Surge/Script/YouTube.js
 
 [MITM]
 hostname = %APPEND% *.googlevideo.com, *.youtube.com, youtubei.googleapis.com
